@@ -117,7 +117,6 @@ function showBoats() {
 
       boats[i].display();
       boats[i].animate();
-      var collision = Matter.SAT.collides(tower.body, boats[i].body);
 
     }
   } else {
