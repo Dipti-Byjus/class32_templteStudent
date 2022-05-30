@@ -10,17 +10,13 @@ var boats = [];
 var boatAnimation = [];
 var boatSpritedata, boatSpritesheet;
 
-var brokenBoatAnimation = [];
-var brokenBoatSpritedata, brokenBoatSpritesheet;
 
 function preload() {
   backgroundImg = loadImage("./assets/background.gif");
   towerImage = loadImage("./assets/tower.png");
   boatSpritedata = loadJSON("assets/boat/boat.json");
   boatSpritesheet = loadImage("assets/boat/boat.png");
- brokenBoatSpritedata = loadJSON("assets/boat/broken_boat.json");
-  brokenBoatSpritesheet = loadImage("assets/boat/broken_boat.png");
-}
+ }
 
 function setup() {
   canvas = createCanvas(1200, 600);
@@ -37,13 +33,7 @@ function setup() {
     var img = boatSpritesheet.get(pos.x, pos.y, pos.w, pos.h);
     boatAnimation.push(img);
   }
- var brokenBoatFrames = brokenBoatSpritedata.frames;
-  for (var i = 0; i < brokenBoatFrames.length; i++) {
-    var pos = brokenBoatFrames[i].position;
-    var img = brokenBoatSpritesheet.get(pos.x, pos.y, pos.w, pos.h);
-    brokenBoatAnimation.push(img);
-  }
-
+ 
 }
 
 function draw() {
